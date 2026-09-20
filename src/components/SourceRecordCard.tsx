@@ -1,0 +1,2 @@
+import type {SourceRecord} from '../engine/types';
+export function SourceRecordCard({record}:{record:SourceRecord}){return <article className="source-card" id={`source-${record.id}`} tabIndex={-1}><div className="source-top"><span>{record.type.replace('-',' ')}</span><small>SYNTHETIC</small></div><h4>{record.title}</h4><p className="source-meta">{record.sender} · {record.receivedAt}</p><dl>{Object.entries(record.fields).map(([k,v])=><div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl><p className="source-body">{record.body}</p></article>}

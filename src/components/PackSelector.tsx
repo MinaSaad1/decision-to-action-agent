@@ -1,0 +1,2 @@
+import type {PackId} from '../engine/types';import {workflowPacks} from '../packs/registry';
+export function PackSelector({selected,onSelect}:{selected:PackId;onSelect:(id:PackId)=>void}){return <div className="pack-tabs" role="tablist" aria-label="Workflow packs">{workflowPacks.map((p,i)=><button key={p.id} role="tab" aria-selected={selected===p.id} onClick={()=>onSelect(p.id)}><span>0{i+1}</span><b>{p.label}</b><small>{p.featured?'Featured walkthrough':'Workflow pack'}</small></button>)}</div>}

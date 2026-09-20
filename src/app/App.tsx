@@ -1,8 +1,2 @@
-export function App() {
-  return (
-    <main>
-      <h1>Not another chatbot. An agent that completes the workflow.</h1>
-      <p>Synthetic demonstration data. No customer records are used.</p>
-    </main>
-  );
-}
+import {useState} from 'react';import {ArrowUpRight} from 'lucide-react';import type {PackId} from '../engine/types';import {getWorkflowPack} from '../packs/registry';import {Hero} from '../components/Hero';import {PackSelector} from '../components/PackSelector';import {Workspace} from '../components/Workspace';
+export function App(){const [selected,setSelected]=useState<PackId>('procurement');const pack=getWorkflowPack(selected);return <><Hero/><main id="proof"><section className="proof-intro"><p className="kicker">One engine. Three workflow packs.</p><h2>The same operating model, applied where the work changes.</h2><p>Intake → Understand → Evaluate → Explain → Human gate → Act and log</p></section><PackSelector selected={selected} onSelect={setSelected}/><Workspace pack={pack}/><section className="final-cta"><p className="kicker">14-Day AI Operations Agent Sprint</p><h2>Show me the workflow your team repeats every week.</h2><a href="https://cal.com/minasaad/60min?overlayCalendar=true" target="_blank" rel="noreferrer">Show me your workflow <ArrowUpRight/></a></section></main><footer><b>MINA SAAD</b><span>AI agents · Automation · Cairo / Remote</span></footer></>}
