@@ -23,6 +23,8 @@ export const procurementPack: WorkflowPack = {
           { sourceId: 'cedar-q', label: 'Cedar quotation', excerpt: '$137,400 total, 55-day lead, Net 30, 36-month warranty.' },
           { sourceId: 'pr-1042', label: 'Purchase request', excerpt: 'Delivery by 2026-11-15 and minimum 24-month warranty.' },
           { sourceId: 'proc-policy', label: 'Award policy', excerpt: 'Mandatory failures exclude an offer before weighted scoring.' },
+          { sourceId: 'aster-q', label: 'Aster quotation', excerpt: '$141,600 total, 42-day lead, 50% advance, 24-month warranty.' },
+          { sourceId: 'meridian-q', label: 'Meridian quotation', excerpt: '$133,200 total, 70-day lead, 18-month warranty.' },
         ],
         policyChecks: [
           { id: 'mandatory', label: 'Mandatory requirements', result: 'pass', detail: 'Cedar meets compliance, delivery, and warranty thresholds.' },
