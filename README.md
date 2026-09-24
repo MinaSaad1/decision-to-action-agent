@@ -2,6 +2,8 @@
 
 A public interactive proof of a production-minded AI agent pattern across Procurement, Recruitment, and Customer Operations.
 
+**Canonical home:** https://www.mina-saad.com/decision-to-action (ported into the `mina-saad-site` repo on 2026-09-24, deterministic mode only). This repo stays as the standalone build: the GitHub Pages copy is the rollback, and it still carries the optional live-model driver and `api/run.ts`. The site version also fixed return and escalate so they no longer prepare the approved action.
+
 ## What it demonstrates
 
 - One reusable six-stage agent engine
@@ -53,6 +55,10 @@ The browser bundle never receives the API key.
 ## Safety boundary
 
 The proof prepares actions but does not send email, update an ATS, write to a CRM, award a supplier, or contact a customer.
+
+## Recording
+
+`node scripts/record-proof.mjs` records the procurement walkthrough from the website, cued to `docs/recording-script.md`, and prints the front trim for the page load. The current cut is `artifacts/decision-to-action-agent-90s-site.mp4` (the original GitHub Pages cut is kept beside it).
 
 ## Project documents
 
